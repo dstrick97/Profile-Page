@@ -15,61 +15,111 @@
 </head>
 
 <body>
+    <h1 class="bg-primary" style="text-align: center; color: white;">FakeBook</h1>
+
+    <!--Create grid-->
     <div class="container-fluid">
         <div class="row">
             <div class="bg-primary col-sm-3">
                 <!--For Image-->
+                <img style="margin-bottom: 30px; margin-top: 30px;" src="profilePic.JPG" alt="Profile Picture"
+                    class="col-sm-3, col-lg-12">
             </div>
             <div class="col-sm-9">
                 <!--For Form-->
+                <!--Name Line-->
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">
+                        <h4>Name</h4>
+                    </label>
                     <div class="input-group">
                         <input type="text" id="nameText" class="form-control" style="display: none;">
                         <div style="margin-right: 10px;" id="name">Daniel Strickland</div>
                         <div class="input-group-append">
-                            <button class="input-group-text" id="editName"
-                                onclick="changeText(document.getElementById('name'), document.getElementById('nameText'), document.getElementById('editName'), document.getElementById('saveName'))"><i
-                                    class='fas fa-pen' style="color: blue;"></i></button></div>
-                        <button
-                            onclick="save(document.getElementById('name'), document.getElementById('nameText'), document.getElementById('editName'), document.getElementById('saveName'))"
-                            id="saveName" class="input-group-text" style="display: none;">Save</button>
+                            <!--Edit Button-->
+                            <button class="input-group-text" id="editName" onclick="changeText(document.getElementById('name'), 
+                                    document.getElementById('nameText'), 
+                                    document.getElementById('editName'), 
+                                    document.getElementById('saveName'))">
+                                    <i class='fas fa-pen' style="color: blue;"></i></button></div>
+                        <!--Save Button-->
+                        <button onclick="save(document.getElementById('name'), 
+                                document.getElementById('nameText'), 
+                                document.getElementById('editName'), 
+                                document.getElementById('saveName'))" id="saveName" class="input-group-text"
+                                style="display: none;">Save</button>
                     </div>
                 </div>
+                <!--Phone Line-->
                 <div class="form-group">
-                    <label for="phone">Phone</label>
+                    <label for="phone">
+                        <h4>Phone</h4>
+                    </label>
                     <div class="input-group">
                         <div id="phone" style="margin-right: 10px;">719-357-2578</div>
                         <input type="text" id="phoneText" class="form-control" style="display: none;">
-                        <div class="input-group-append"><button class="input-group-text" id="editPhone"
-                                onclick="changeText(document.getElementById('phone'), document.getElementById('phoneText'), document.getElementById('editPhone'), document.getElementById('savePhone'))"><i
-                                    class='fas fa-pen' style="color: blue;"></i></button></div>
-                        <button
-                            onclick="save(document.getElementById('phone'), document.getElementById('phoneText'), document.getElementById('editPhone'), document.getElementById('savePhone'))"
-                            id="savePhone" class="input-group-text" style="display: none;">Save</button>
+                        <div class="input-group-append">
+                            <!--Edit Button-->
+                            <button class="input-group-text" id="editPhone" onclick="changeText(document.getElementById('phone'), 
+                                document.getElementById('phoneText'), 
+                                document.getElementById('editPhone'), 
+                                document.getElementById('savePhone'))">
+                                <i class='fas fa-pen' style="color: blue;"></i></button></div>
+                        <!--Save Button-->
+                        <button onclick="save(document.getElementById('phone'), 
+                            document.getElementById('phoneText'), 
+                            document.getElementById('editPhone'), 
+                            document.getElementById('savePhone'))" id="savePhone" class="input-group-text"
+                            style="display: none;">Save</button>
                     </div>
                 </div>
+                <!--Email Line-->
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">
+                        <h4>Email</h4>
+                    </label>
                     <div class="input-group">
                         <div id="email" style="margin-right: 10px;">daniel.ds.strickland@gmail.com</div>
                         <input type="text" id="emailText" class="form-control" style="display: none;">
-                        <div class="input-group-append"><button class="input-group-text" id="editEmail"
-                                onclick="changeText(document.getElementById('email'), document.getElementById('emailText'), document.getElementById('editEmail'), document.getElementById('saveEmail'))"><i
-                                    class='fas fa-pen' style="color: blue;"></i></button></div>
-                        <button
-                            onclick="save(document.getElementById('email'), document.getElementById('emailText'), document.getElementById('editEmail'), document.getElementById('saveEmail'))"
-                            id="saveEmail" class="input-group-text" style="display: none;">Save</button>
+                        <div class="input-group-append">
+                            <!--Edit Button-->
+                            <button class="input-group-text" id="editEmail" onclick="changeText(document.getElementById('email'),
+                                    document.getElementById('emailText'), 
+                                    document.getElementById('editEmail'), 
+                                    document.getElementById('saveEmail'))">
+                                    <i class='fas fa-pen' style="color: blue;"></i></button></div>
+                        <!--Save Button-->
+                        <button onclick="save(document.getElementById('email'), 
+                            document.getElementById('emailText'), 
+                            document.getElementById('editEmail'), 
+                            document.getElementById('saveEmail'))" id="saveEmail" class="input-group-text"
+                            style="display: none;">Save</button>
                     </div>
                 </div>
+                <!--Bio Line-->
                 <div class="form-group">
-                    <label for="bio">About Me</label>
+                    <label for="bio">
+                        <h4>About Me</h4>
+                    </label>
                     <div class="input-group">
-                        <div id="bio" style="margin-right: 10px;">I am a computer science major at BYU-Idaho. I love rock climbing and snow boarding. My wife and I are celebrating our first anniversary in April.</div>
-                        <textarea id="bioText" cols="30" rows="10" class="form-control" style="display: none;"></textarea>
-                        <div class="input-group-append"><button class="input-group-text" id="editBio" onclick="changeText(document.getElementById('bio'), document.getElementById('bioText'), document.getElementById('editBio'), document.getElementById('saveBio'))"><i class='fas fa-pen'
-                                    style="color: blue;"></i></button></div>
-                        <button onclick="save(document.getElementById('bio'), document.getElementById('bioText'), document.getElementById('editBio'), document.getElementById('saveBio'))" id="saveBio" class="input-group-text" style="display: none;">Save</button>
+                        <div id="bio" style="margin-right: 10px;">I am a computer science major at BYU-Idaho. I love
+                            rock climbing and snow boarding. My wife and I are celebrating our first anniversary in
+                            April.</div>
+                        <textarea id="bioText" cols="30" rows="10" class="form-control"
+                            style="display: none;"></textarea>
+                        <div class="input-group-append">
+                            <!--Edit Button-->
+                            <button class="input-group-text" id="editBio" onclick="changeText(document.getElementById('bio'), 
+                                    document.getElementById('bioText'), 
+                                    document.getElementById('editBio'), 
+                                    document.getElementById('saveBio'))">
+                                    <i class='fas fa-pen' style="color: blue;"></i></button></div>
+                        <!--Save Button-->
+                        <button onclick="save(document.getElementById('bio'), 
+                                document.getElementById('bioText'), 
+                                document.getElementById('editBio'), 
+                                document.getElementById('saveBio'))" id="saveBio" class="input-group-text"
+                                style="display: none;">Save</button>
                     </div>
                 </div>
             </div>
@@ -77,13 +127,14 @@
     </div>
 
     <script>
+        //Bring input text up front and provite a save button
         function changeText(before, update, edit, save) {
             before.style.display = "none";
             update.style.display = "block";
             save.style.display = "block";
             edit.style.display = "none";
         }
-
+        //Save the text, replace the input box and save button
         function save(before, update, edit, save) {
             before.style.display = "block";
             before.innerHTML = update.value;
